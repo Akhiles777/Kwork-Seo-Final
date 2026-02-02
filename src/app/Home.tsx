@@ -123,15 +123,15 @@ const Home = () => {
 
               <ul className="home-third-block-text-ul">
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="Иконка проверки" className="li-icon" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="Иконка проверки" className="li-icon" loading='lazy'  />
                   <p>Собственное производство</p>
                 </li>
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="Иконка проверки" className="li-icon" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="Иконка проверки" className="li-icon" loading='lazy' />
                   <p>Гарантия качества</p>
                 </li>
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="Иконка проверки" className="li-icon" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="Иконка проверки" className="li-icon" loading='lazy' />
                   <p>Натуральные продукты</p>
                 </li>
               </ul>
@@ -196,19 +196,19 @@ const Home = () => {
 
               <ul className="home-fifth-block-text-ul">
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" loading='lazy' />
                   <p>Свои пасеки и пчёлы под заботой</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" loading='lazy' />
                   <p>Мёд из экологически чистых мест</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" loading='lazy' />
                   <p>Прямые поставки - от улья до вашего дома</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" loading='lazy' />
                   <p>Тепло и душа в каждой баночке</p>
                 </li>
               </ul>
