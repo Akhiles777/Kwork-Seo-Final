@@ -78,11 +78,11 @@ const Home = () => {
           </button>
 
           <nav className="header-links" aria-label="Основное меню">
-          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке в Абхазии</Link></li>
+          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нас</Link></li>
               <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог натурального мёда</Link></li>
               <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата заказа</Link></li>
             <button className="footer-content-buttom-button" onClick={scrollToBottom} aria-label="Перейти к контактам">
-  Связаться с нами
+Контакты
 </button>
 
           </nav>
@@ -198,7 +198,7 @@ const Home = () => {
 
               <ul className="home-fifth-block-text-ul">
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16}  />
                   <p>Свои пасеки и пчёлы под заботой</p>
                 </li>
                 <li className="home-fifth-block-text-li">
@@ -218,7 +218,7 @@ const Home = () => {
             </div>
 
             <div className="home-fifth-block-img">
-              <img src="https://i.postimg.cc/QdhV1LmV/bee.png" alt="Пчела" className="home-fifth-block-3imgs" width={400} height={300} loading="lazy" decoding="async" />
+              <img src="https://i.postimg.cc/QdhV1LmV/bee.png" alt="Пчела" className="home-fifth-block-3imgs" width={400} height={300} />
             </div>
           </section>
 
