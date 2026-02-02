@@ -35,6 +35,7 @@ const cards = [
   },
 ];
 
+
 import LazyMap from '@/components/LazyMap';
 
 const position: [number, number] = [43.315713, 40.408009];
@@ -78,11 +79,11 @@ const Home = () => {
           </button>
 
           <nav className="header-links" aria-label="Основное меню">
-          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке в Абхазии</Link></li>
-              <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог натурального мёда</Link></li>
-              <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата заказа</Link></li>
+          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нас</Link></li>
+              <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог</Link></li>
+              <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата</Link></li>
             <button className="footer-content-buttom-button" onClick={scrollToBottom} aria-label="Перейти к контактам">
-  Связаться с нами
+ Контакты
 </button>
 
           </nav>
@@ -106,8 +107,8 @@ const Home = () => {
             </p>
 
 
-      <h1>Пожалуйста напишите сюда ТГ: <a href='https://t.me/Workmkh'>@Workmkh</a></h1>
       
+
             <div className="home-categories-grid">
   {categories.map((cat, index) => (
     <div key={index} className={`home-category-card ${cat.className}`}>
