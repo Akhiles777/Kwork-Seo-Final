@@ -91,6 +91,9 @@ const Home = () => {
         <hr className="header-hr" />
       </header>
 
+
+
+
       <div className="home-content">
         <div className="home-first-block">
           <img src="https://i.postimg.cc/nr2gWQyk/honey.png" alt="Натуральный мёд из Абхазии" className="header-honey" width={400} height={300} fetchPriority="high" decoding="async" />
@@ -102,6 +105,9 @@ const Home = () => {
               Наш мёд собирается в экологически чистых альпийских лугах Абхазии, где пчёлы питаются нектаром редких горных цветов. Более 37 лет мы бережно храним традиции пчеловодства и поставляем натуральный горный мёд напрямую с пасеки.
             </p>
 
+
+      <h1>Пожалуйста напишите сюда ТГ: <a href='https://t.me/Workmkh'>@Workmkh</a></h1>
+      
             <div className="home-categories-grid">
   {categories.map((cat, index) => (
     <div key={index} className={`home-category-card ${cat.className}`}>
