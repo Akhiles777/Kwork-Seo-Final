@@ -2,11 +2,9 @@
 
 import { useState, useRef, useEffect } from 'react';
 import '@/styles/home.css';
-import BeeAnimation from '@/components/BeeAnimation';
-import 'leaflet/dist/leaflet.css';
 import { categories } from '@/data/categories';
-import dynamic from 'next/dynamic';
-import 'leaflet/dist/leaflet.css';
+
+import DeferredBee from '@/components/DeferredBee';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 
@@ -37,7 +35,8 @@ const cards = [
   },
 ];
 
-const MapWithNoSSR = dynamic(() => import('@/components/MapComponent'), { ssr: false });
+import LazyMap from '@/components/LazyMap';
+
 const position: [number, number] = [43.315713, 40.408009];
 
 const Home = () => {
@@ -67,27 +66,26 @@ const Home = () => {
 
   return (
     <div className="home">
-      <BeeAnimation />
-      <BeeAnimation />
+      <DeferredBee />
 
       <header className="home-header">
         <div className="home-header-content">
         <li className="logo-header-li"><Link href="/" className="logo-header">
-        <img src="https://i.postimg.cc/PxtsJWs9/logohoney_1.png" alt="Логотип Дом мёда Абхазии" loading="lazy" /></Link></li>
+        <img src="https://i.postimg.cc/PxtsJWs9/logohoney_1.png" alt="Логотип Дом мёда Абхазии" width={30} height={28} loading="lazy" decoding="async" /></Link></li>
 
           <button className="home-burger" onClick={() => setHomeMenuOpen(true)}>
-            <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" loading="lazy" />
+            <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
           </button>
 
-          <div className="header-links">
-          <li><Link href="/about">О нас</Link></li>
-              <li><Link href="/catalog">Каталог</Link></li>
-              <li><Link href="/delivery">Доставка и оплата</Link></li>
-            <button className="footer-content-buttom-button" onClick={scrollToBottom}>
-  Контакты
+          <nav className="header-links" aria-label="Основное меню">
+          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке в Абхазии</Link></li>
+              <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог натурального мёда</Link></li>
+              <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата заказа</Link></li>
+            <button className="footer-content-buttom-button" onClick={scrollToBottom} aria-label="Перейти к контактам">
+  Связаться с нами
 </button>
 
-          </div>
+          </nav>
           <div className="header-div"></div>
         </div>
         <hr className="header-hr" />
@@ -95,18 +93,19 @@ const Home = () => {
 
       <div className="home-content">
         <div className="home-first-block">
-          <img src="https://i.postimg.cc/nr2gWQyk/honey.png" alt="Изображение мёда" className="header-honey" loading="lazy" />
+          <img src="https://i.postimg.cc/nr2gWQyk/honey.png" alt="Натуральный мёд из Абхазии" className="header-honey" width={400} height={300} fetchPriority="high" decoding="async" />
 
           <section className="home-categories-section">
             <h2 className="home-categories-title">АРШБА. ДОМ МЁДА</h2>
+            <p className="home-categories-header-tagline">Натуральный горный мёд из Абхазии с доставкой по России</p>
             <p className="home-categories-subtitle">
-              Наш мед собирается в экологически чистых альпийских лугах Абхазии, где пчелы питаются нектаром редких горных цветов.
+              Наш мёд собирается в экологически чистых альпийских лугах Абхазии, где пчёлы питаются нектаром редких горных цветов. Более 37 лет мы бережно храним традиции пчеловодства и поставляем натуральный горный мёд напрямую с пасеки.
             </p>
 
             <div className="home-categories-grid">
   {categories.map((cat, index) => (
     <div key={index} className={`home-category-card ${cat.className}`}>
-      <img src={cat.img} alt={cat.altText} className="category-img" />
+      <img src={cat.img} alt={cat.altText} className="category-img" width={300} height={200} loading="lazy" decoding="async" />
     </div>
   ))}
 </div>
@@ -118,20 +117,20 @@ const Home = () => {
 
             <div className="home-third-block-text">
               <h2 className="home-third-block-text-h2">
-                Мы бережно собираем мёд с пасек, окружённых горами, солнцем и чистым воздухом.
+                Мы бережно собираем мёд с пасек, окружённых горами, солнцем и чистым воздухом. Каждая баночка — это результат труда пчёл, которые собирают нектар на высоте 2000–2500 метров над уровнем моря в местах, где произрастают сотни видов лекарственных растений.
               </h2>
 
               <ul className="home-third-block-text-ul">
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="Иконка проверки" className="li-icon" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Собственное производство</p>
                 </li>
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="Иконка проверки" className="li-icon" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Гарантия качества</p>
                 </li>
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="Иконка проверки" className="li-icon" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Натуральные продукты</p>
                 </li>
               </ul>
@@ -147,7 +146,7 @@ const Home = () => {
     горный, экологически чистый, без добавок
   </span>
 </h1>
-            <p className="top-section-description">От пчелиного улья до вашего дома</p>
+            <p className="top-section-description">От пчелиного улья до вашего дома — мы доставляем натуральный мёд по всей России. Без посредников, с гарантией качества и свежести продукта.</p>
             <div className="top-section-cards">
               {cards.map((card, i) => (
                 <div className="news-section-card" key={i}>
@@ -155,7 +154,10 @@ const Home = () => {
                     src={card.img}
                     className="top-bank-img"
                     alt={card.title}
+                    width={400}
+                    height={300}
                     loading="lazy"
+                    decoding="async"
                   />
 
                   <div className="news-section-card-info">
@@ -183,7 +185,7 @@ const Home = () => {
             <div className="story-content">
               <p className="text-gray-600 mb-6" data-aos="fade-up">Наша история</p>
               <h3 className="text-2xl font-semibold mb-4" data-aos="fade-up">
-               <span>Дом мёда - </span>это семейное дело, выросшее из любви к пчёлам и уважения к природе. <br />Мы не просто собираем мёд - мы храним традиции и передаём их из поколения в поколение
+               <span>Дом мёда — </span>это семейное дело с историей более 37 лет, выросшее из любви к пчёлам и уважения к природе. <br />Мы не просто собираем мёд — мы храним традиции пчеловодства и передаём их из поколения в поколение, сохраняя натуральность и честность каждого продукта.
               </h3>
 
               <Link href="/about" className="story-btn" data-aos="fade-up">Читать еще</Link>
@@ -192,23 +194,23 @@ const Home = () => {
 
           <section className="home-fifth-block">
             <div className="home-fifth-block-text">
-              <h2 className="home-fifth-block-text-h2">Почему выбирают нас</h2>
+              <h2 className="home-fifth-block-text-h2">Почему выбирают наш мёд</h2>
 
               <ul className="home-fifth-block-text-ul">
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Свои пасеки и пчёлы под заботой</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Мёд из экологически чистых мест</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Прямые поставки - от улья до вашего дома</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="Иконка проверки" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Тепло и душа в каждой баночке</p>
                 </li>
               </ul>
@@ -216,18 +218,18 @@ const Home = () => {
             </div>
 
             <div className="home-fifth-block-img">
-              <img src="https://i.postimg.cc/QdhV1LmV/bee.png" alt="Пчела" className="home-fifth-block-3imgs" loading="lazy" />
+              <img src="https://i.postimg.cc/QdhV1LmV/bee.png" alt="Пчела" className="home-fifth-block-3imgs" width={400} height={300} loading="lazy" decoding="async" />
             </div>
           </section>
 
           <section className="home-seventh" ref={contactsRef}>
             <div className="home-seventh-map">
-          <MapWithNoSSR />
+          <LazyMap />
           <div className="home-seventh-form">
             <div className="home-seventh-form-content">
           <p className="contact-h2">Контакты</p>
           <a href="tel:+79409948837" className="contact-phone-img phone-contact">
-            <img src="https://i.postimg.cc/G2QX3nXs/phone.png" className='contact-phone-image' alt="Телефон" loading="lazy" /> +7 (940) 994-88-37
+            <img src="https://i.postimg.cc/G2QX3nXs/phone.png" className='contact-phone-image' alt="" width={20} height={20} loading="lazy" decoding="async" /> +7 (940) 994-88-37
           </a>
           <a
             href={`https://www.google.com/maps/dir/?api=1&destination=${position[0]},${position[1]}`}
@@ -235,22 +237,22 @@ const Home = () => {
             rel="noopener noreferrer"
             className="contact-phone-img phone-contact"
           >
-            <img src="https://i.postimg.cc/m2Z0H8Mg/location.png" className='contact-location' alt="Адрес" loading="lazy" />
+            <img src="https://i.postimg.cc/m2Z0H8Mg/location.png" className='contact-location' alt="" width={23} height={20} loading="lazy" decoding="async" />
             <div className="contact-address">
               <p>Республика Абхазия, Бзыбское ущелье</p>
               <p className="contact-address-secondP">(построить маршрут)</p>
             </div>
           </a>
           <a href="mailto:arshba27@mail.ru" className="contact-phone-img phone-contact">
-            <img src="https://i.postimg.cc/XJwTwPQd/gmail.png" className='contact-phone-image' alt="Электронная почта" loading="lazy" />
+            <img src="https://i.postimg.cc/XJwTwPQd/gmail.png" className='contact-phone-image' alt="" width={20} height={20} loading="lazy" decoding="async" />
             arshba27@mail.ru
           </a>
           <div className="contact-links">
                   <a href="https://wa.me/79409948837" target="_blank" rel="noreferrer noopener">
-                    <img src="https://i.postimg.cc/zBjxDYxh/WA.png" alt="WhatsApp" loading="lazy" />
+                    <img src="https://i.postimg.cc/zBjxDYxh/WA.png" alt="WhatsApp" width={35} height={33} loading="lazy" decoding="async" />
                   </a>
                   <a href="https://instagram.com/alpiskiy_med" className="instagram-btn" target="_blank" rel="noreferrer noopener">
-                    <img src="https://i.postimg.cc/VNPcQy7b/Inst.png" alt="Instagram" loading="lazy" />
+                    <img src="https://i.postimg.cc/VNPcQy7b/Inst.png" alt="Instagram" width={35} height={33} loading="lazy" decoding="async" />
                   </a>
 
                   <button
@@ -264,7 +266,10 @@ const Home = () => {
   <img
     src="https://i.postimg.cc/SK9nfNgC/max.png"
     alt="MAX"
+    width={35}
+    height={33}
     loading="lazy"
+    decoding="async"
   />
 </button>
                 </div>
@@ -286,20 +291,21 @@ const Home = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <ul className="home-modal-list">
-            <li><Link href="/">Главная</Link></li>
-              <li><Link href="/about">О нас</Link></li>
-              <li><Link href="/catalog">Каталог</Link></li>
-              <li><Link href="/delivery">Доставка и оплата</Link></li>
+            <li><Link href="/">Главная страница сайта</Link></li>
+              <li><Link href="/about">О нашей пасеке в Абхазии</Link></li>
+              <li><Link href="/catalog">Каталог натурального мёда</Link></li>
+              <li><Link href="/delivery">Доставка и оплата заказа</Link></li>
               <li>
-                <button onClick={scrollToContacts}>Контакты</button>
+                <button onClick={scrollToContacts}>Связаться с нами</button>
               </li>
             </ul>
 
             <button
               className="home-modal-close"
               onClick={() => setHomeMenuOpen(false)}
+              aria-label="Закрыть меню"
             >
-              Закрыть
+              Закрыть меню
             </button>
           </div>
         </div>
