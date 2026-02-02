@@ -54,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/catalog/citrus-honey`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.6,
+      priority: 0.6
     },
   ]
 }
