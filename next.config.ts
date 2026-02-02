@@ -4,12 +4,20 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   output: 'export',
-   images: {
-    unoptimized: true, 
+    images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.postimg.cc',
+        pathname: '/**',
+      },
+    ],
   },
 
-  
   compress: true,
+
+  
+  
   poweredByHeader: false,
 };
 

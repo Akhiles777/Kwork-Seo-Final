@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import "@/styles/beeAnimation.css";
-import Image from "next/image";
 
 const BeeAnimation = () => {
   const beeRef = useRef<HTMLImageElement | null>(null);
@@ -14,30 +13,24 @@ const BeeAnimation = () => {
     let x = 20;
     let y = window.innerHeight / 2;
     const minSpeed = 0.6;
+
     let vx = 0;
     let vy = 0;
-    let lastTime = 0;
-    const throttleMs = 32;
 
     const randSpeed = () => {
       vx = (Math.random() - 0.5) * 2;
       if (Math.abs(vx) < minSpeed) vx = vx < 0 ? -minSpeed : minSpeed;
+
       vy = (Math.random() - 0.5) * 1.2;
     };
 
     randSpeed();
 
-    const showBee = () => {
+    setTimeout(() => {
       bee.style.opacity = "1";
-    };
-    const showTimer = window.setTimeout(showBee, 500);
+    }, 300);
 
-    const moveBee = (now: number) => {
-      if (now - lastTime < throttleMs) {
-        requestAnimationFrame(moveBee);
-        return;
-      }
-      lastTime = now;
+    const moveBee = () => {
       x += vx;
       y += vy;
 
@@ -51,23 +44,20 @@ const BeeAnimation = () => {
 
       const flip = vx < 0 ? "scaleX(-1)" : "scaleX(1)";
       const tilt = `rotate(${vy * 6}deg)`;
+
       bee.style.transform = `translate(${x}px, ${y}px) ${flip} ${tilt}`;
 
       requestAnimationFrame(moveBee);
     };
 
-    requestAnimationFrame(moveBee);
-    return () => {
-      clearTimeout(showTimer);
-    };
+    moveBee();
   }, []);
 
   return (
     <img
       ref={beeRef}
       src="https://i.postimg.cc/0QMNP9kH/beefly_(1).png"
-      alt=""
-      aria-hidden="true"
+      alt="bee"
       className="beeFlyy"
       style={{
         position: "fixed",

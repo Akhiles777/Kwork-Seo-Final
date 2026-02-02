@@ -122,15 +122,15 @@ const Home = () => {
 
               <ul className="home-third-block-text-ul">
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="good" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Собственное производство</p>
                 </li>
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="garanty" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Гарантия качества</p>
                 </li>
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="product" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Натуральные продукты</p>
                 </li>
               </ul>
@@ -198,19 +198,19 @@ const Home = () => {
 
               <ul className="home-fifth-block-text-ul">
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="image" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Свои пасеки и пчёлы под заботой</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="image" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Мёд из экологически чистых мест</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="iamge" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Прямые поставки - от улья до вашего дома</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
+                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="check" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Тепло и душа в каждой баночке</p>
                 </li>
               </ul>
@@ -229,7 +229,7 @@ const Home = () => {
             <div className="home-seventh-form-content">
           <p className="contact-h2">Контакты</p>
           <a href="tel:+79409948837" className="contact-phone-img phone-contact">
-            <img src="https://i.postimg.cc/G2QX3nXs/phone.png" className='contact-phone-image' alt="" width={20} height={20} loading="lazy" decoding="async" /> +7 (940) 994-88-37
+            <img src="https://i.postimg.cc/G2QX3nXs/phone.png" className='contact-phone-image' alt="phone-number" width={20} height={20} loading="lazy" decoding="async" /> +7 (940) 994-88-37
           </a>
           <a
             href={`https://www.google.com/maps/dir/?api=1&destination=${position[0]},${position[1]}`}
@@ -237,14 +237,14 @@ const Home = () => {
             rel="noopener noreferrer"
             className="contact-phone-img phone-contact"
           >
-            <img src="https://i.postimg.cc/m2Z0H8Mg/location.png" className='contact-location' alt="" width={23} height={20} loading="lazy" decoding="async" />
+            <img src="https://i.postimg.cc/m2Z0H8Mg/location.png" className='contact-location' alt="location" width={23} height={20} loading="lazy" decoding="async" />
             <div className="contact-address">
               <p>Республика Абхазия, Бзыбское ущелье</p>
               <p className="contact-address-secondP">(построить маршрут)</p>
             </div>
           </a>
           <a href="mailto:arshba27@mail.ru" className="contact-phone-img phone-contact">
-            <img src="https://i.postimg.cc/XJwTwPQd/gmail.png" className='contact-phone-image' alt="" width={20} height={20} loading="lazy" decoding="async" />
+            <img src="https://i.postimg.cc/XJwTwPQd/gmail.png" className='contact-phone-image' alt="email" width={20} height={20} loading="lazy" decoding="async" />
             arshba27@mail.ru
           </a>
           <div className="contact-links">

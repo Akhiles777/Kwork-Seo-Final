@@ -1,13 +1,12 @@
-'use client';
+'use client'; 
 
 import { useState, useRef, useEffect, useMemo } from 'react';
+import BeeAnimation from '@/components/BeeAnimation';
 import '@/styles/catalog.css';
-import DeferredBee from '@/components/DeferredBee';
 import Pagination from '@/components/Pagination';
 import Link from 'next/link';
 import products from '@/data/products';
 import Footer from '@/components/Footer';
-import Image from 'next/image';
 
 const Catalog = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,21 +29,21 @@ const Catalog = () => {
 
   return (
     <div className='catalog'>
-      <DeferredBee />
+      <BeeAnimation />
 
       <header className="catalog-header">
         <div className="catalog-header-content">
         <li className="logo-header-li"><Link href="/" className="catalog-logo-header">
-          <img src='https://i.postimg.cc/PxtsJWs9/logohoney_1.png' alt="Логотип Дом мёда Аршба" width={30} height={28} loading="lazy" decoding="async" /></Link></li>
+          <img src='https://i.postimg.cc/PxtsJWs9/logohoney_1.png' alt="Logo" /></Link></li>
         
           <button className="catalog-burger" onClick={() => setHomeMenuOpen(true)}>
-            <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
+            <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="menu" />
           </button>
-          <nav className="catalog-header-links" aria-label="Основное меню">
-          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке в Абхазии</Link></li>
-              <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог натурального мёда</Link></li>
-              <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата заказа</Link></li>
-          </nav>
+          <div className="catalog-header-links">
+          <li><Link href="/about">О нас</Link></li>
+              <li><Link href="/catalog">Каталог</Link></li>
+              <li><Link href="/delivery">Доставка и оплата</Link></li>
+          </div>
         </div>
         <hr className='header-hr' />
       </header>
@@ -55,8 +54,6 @@ const Catalog = () => {
             <div
               className="categoryData-image"
               style={{ backgroundImage: `url(${product.img})` }}
-              role="img"
-              aria-label={product.title}
             />
             <div className="categoryData-info">
               <h2>{product.title}</h2>
@@ -92,17 +89,16 @@ const Catalog = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <ul className="home-modal-list">
-            <li><Link href="/">Главная страница сайта</Link></li>
-              <li><Link href="/about">О нашей пасеке в Абхазии</Link></li>
-              <li><Link href="/catalog">Каталог натурального мёда</Link></li>
-              <li><Link href="/delivery">Доставка и оплата заказа</Link></li>
+            <li><Link href="/">Главная</Link></li>
+              <li><Link href="/about">О нас</Link></li>
+              <li><Link href="/catalog">Каталог</Link></li>
+              <li><Link href="/delivery">Доставка и оплата</Link></li>
             </ul>
             <button
               className="home-modal-close"
               onClick={() => setHomeMenuOpen(false)}
-              aria-label="Закрыть меню"
             >
-              Закрыть меню
+              Закрыть
             </button>
           </div>
         </div>
