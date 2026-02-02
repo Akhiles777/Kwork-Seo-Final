@@ -8,29 +8,29 @@ import DeferredBee from '@/components/DeferredBee';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 
-import Image from 'next/image';
+
 
 const cards = [
   {
-    img: "https://i.postimg.cc/Yqd2GgGm/Frame_1333.png",
+    img: "/images/image-1.png",
     title: "Альпийские луга с липой",
     description: "Ароматный мёд с мягким вкусом, полезный для укрепления иммунитета.",
     price: "1350 руб. за кг",
   },
   {
-    img: "https://i.postimg.cc/9XtQ2scL/Frame_1329.png",
+    img: "/images/image-2.png",
     title: "Каштановый мёд",
     description: "Темный натуральный мёд с легкой горчинкой, полезен для сердца.",
     price: "1350 руб. за кг",
   },
   {
-    img: "https://i.postimg.cc/L4B8SGHm/Frame_1330.png",
+    img: "/images/image-3.png",
     title: "Бортевой мёд",
     description: "Мёд c насыщенным вкусом и уникальным ароматом диких горных цветов.",
     price: "1350 руб. за кг",
   },
   {
-    img: "https://i.postimg.cc/YqrqC89x/Frame_1332.png",
+    img: "/images/image-4.png",
     title: "Цитрусовый мёд",
     description: "Мёд с освежающим цитрусовым вкусом, который подарит энергию и бодрость.",
     price: "1350 руб. за кг",
@@ -107,7 +107,7 @@ const Home = () => {
             <div className="home-categories-grid">
   {categories.map((cat, index) => (
     <div key={index} className={`home-category-card ${cat.className}`}>
-      <img src={cat.img} alt={cat.altText} className="category-img" width={300} height={200} loading="lazy" decoding="async" />
+      <img src={cat.img} alt={cat.altText} className="category-img" width={350} height={200} loading="lazy" decoding="async" />
     </div>
   ))}
 </div>
