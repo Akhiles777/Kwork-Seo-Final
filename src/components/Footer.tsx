@@ -1,7 +1,7 @@
 'use client';
 
 import '@/styles/footer.css';
-import Image from 'next/image';
+
 
 type FooterProps = {
   className?: string; // любой дополнительный класс
@@ -24,7 +24,7 @@ const Footer = ({ className = '' }: FooterProps) => {
           onClick={scrollToTop}
           aria-label="Наверх"
         >
-          <Image src="https://i.postimg.cc/qRL1BH13/up_Button.png" alt="Наверх" width={44} height={44} loading="lazy" decoding="async" />
+          <img src="https://i.postimg.cc/qRL1BH13/up_Button.png" alt="Наверх" width={44} height={44} loading="lazy" decoding="async" />
         </button>
       </div>
     </div>
