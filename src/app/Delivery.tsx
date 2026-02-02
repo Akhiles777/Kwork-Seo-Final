@@ -27,9 +27,9 @@ const Delivery = () => {
             <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
           </button>
           <nav className="delivery-header-links" aria-label="Основное меню">
-          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке в Абхазии</Link></li>
-              <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог натурального мёда</Link></li>
-              <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата заказа</Link></li>
+          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О наc</Link></li>
+              <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог</Link></li>
+              <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата</Link></li>
           </nav>
         </div>
       </header>

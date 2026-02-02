@@ -46,9 +46,9 @@ const About = () => {
           </button>
 
           <nav className="about-header-links" aria-label="Основное меню">
-            <Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке в Абхазии</Link>
-            <Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог натурального мёда</Link>
-            <Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата заказа</Link>
+            <Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нас</Link>
+            <Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог</Link>
+            <Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата</Link>
             <button className="about-contact-button" onClick={scrollToBottom} aria-label="Перейти к контактам">
               Связаться с нами
             </button>
