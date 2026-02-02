@@ -63,7 +63,7 @@ const BeeAnimation = () => {
   }, []);
 
   return (
-    <Image
+    <img
       ref={beeRef}
       src="https://i.postimg.cc/0QMNP9kH/beefly_(1).png"
       alt=""

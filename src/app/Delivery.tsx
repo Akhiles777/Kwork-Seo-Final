@@ -21,10 +21,10 @@ const Delivery = () => {
         <div className="delivery-header-content">
 
         <li className="logo-header-li"><Link href="/"  className="delivery-logo-header">
-        <Image src='https://i.postimg.cc/PxtsJWs9/logohoney_1.png' alt="Логотип Дом мёда Аршба" width={30} height={28} loading="lazy" decoding="async" /></Link></li>
+        <img src='https://i.postimg.cc/PxtsJWs9/logohoney_1.png' alt="Логотип Дом мёда Аршба" width={30} height={28} loading="lazy" decoding="async" /></Link></li>
 
           <button className="delivery-burger" onClick={() => setHomeMenuOpen(true)}>
-            <Image src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
+            <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
           </button>
           <nav className="delivery-header-links" aria-label="Основное меню">
           <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке в Абхазии</Link></li>
@@ -47,12 +47,12 @@ const Delivery = () => {
       </section>
 
       <div className="beeDelivery">
-        <Image src="https://i.postimg.cc/VNN6Zj3y/bee_Delivery.png" alt="" width={200} height={150} loading="lazy" decoding="async" />
+        <img src="https://i.postimg.cc/VNN6Zj3y/bee_Delivery.png" alt="" width={200} height={150} loading="lazy" decoding="async" />
       </div>
 
       <div className="delivery-info">
         <div className="delivery-info-up">
-          <Image src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" width={24} height={24} loading="lazy" decoding="async" />
+          <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" width={24} height={24} loading="lazy" decoding="async" />
           <div className="delivery-info-h2-p">
             <h2>Отправка Почтой России и СДЭК</h2>
             <p className='delivery-info-p'>
@@ -71,7 +71,7 @@ const Delivery = () => {
         </div>
 
         <div className="delivery-info-buttom">
-          <Image src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" width={24} height={24} loading="lazy" decoding="async" />
+          <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" width={24} height={24} loading="lazy" decoding="async" />
           <div className="delivery-info-h2-p">
             <h2>Самовывоз в Абхазии</h2>
             <p className='delivery-info-p'>

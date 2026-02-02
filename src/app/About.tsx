@@ -38,11 +38,11 @@ const About = () => {
       <header className="about-header">
         <div className="about-header-content">
           <Link href="/" className="about-logo-header">
-            <Image src="https://i.postimg.cc/PxtsJWs9/logohoney_1.png" alt="Логотип Дом мёда Аршба" width={30} height={28} loading="lazy" decoding="async" />
+            <img src="https://i.postimg.cc/PxtsJWs9/logohoney_1.png" alt="Логотип Дом мёда Аршба" width={30} height={28} loading="lazy" decoding="async" />
           </Link>
 
           <button className="about-burger" onClick={() => setHomeMenuOpen(true)}>
-            <Image src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
+            <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
           </button>
 
           <nav className="about-header-links" aria-label="Основное меню">
@@ -65,9 +65,9 @@ const About = () => {
         <div className="about-content-second-block">
           <div className="carousel">
             <div className="carousel-track">
-              <Image src={images[getPrevIndex()]} className="small" alt="" width={200} height={150} loading="lazy" decoding="async" onClick={() => setIndex(getPrevIndex())} />
-              <Image src={images[index]} className="big" alt="" width={400} height={300} fetchPriority="high" decoding="async" onClick={() => setIndex(getNextIndex())} />
-              <Image src={images[getNextIndex()]} className="small" alt="" width={200} height={150} loading="lazy" decoding="async" onClick={() => setIndex(getNextIndex())} />
+              <img src={images[getPrevIndex()]} className="small" alt="" width={200} height={150} loading="lazy" decoding="async" onClick={() => setIndex(getPrevIndex())} />
+              <img src={images[index]} className="big" alt="" width={400} height={300} fetchPriority="high" decoding="async" onClick={() => setIndex(getNextIndex())} />
+              <img src={images[getNextIndex()]} className="small" alt="" width={200} height={150} loading="lazy" decoding="async" onClick={() => setIndex(getNextIndex())} />
             </div>
           </div>
 
@@ -80,17 +80,17 @@ const About = () => {
 
         <div className="about-content-fifth-block">
           <div className="about-card">
-            <Image src="https://i.postimg.cc/xCC0gnNj/about_Card1.png" alt="" className="aboutCard1" width={300} height={200} loading="lazy" decoding="async" />
+            <img src="https://i.postimg.cc/xCC0gnNj/about_Card1.png" alt="" className="aboutCard1" width={300} height={200} loading="lazy" decoding="async" />
             <h2>Собственное производство</h2>
             <p>Более 37 лет собираем мёд на альпийских лугах Абхазии, контролируя каждый этап.</p>
           </div>
           <div className="about-card">
-            <Image src="https://i.postimg.cc/HLWcDG8h/about_Card2.png" alt="" className="aboutCard1" width={300} height={200} loading="lazy" decoding="async" />
+            <img src="https://i.postimg.cc/HLWcDG8h/about_Card2.png" alt="" className="aboutCard1" width={300} height={200} loading="lazy" decoding="async" />
             <h2>Гарантия качества</h2>
             <p>Альпийский мёд с высоты более 2000 м, без примесей и промышленной обработки, где растут более 300 видов лекарственных растений.</p>
           </div>
           <div className="about-card">
-            <Image src="https://i.postimg.cc/yxRWXs2d/about_Card3.png" alt="" className="aboutCard1" width={300} height={200} loading="lazy" decoding="async" />
+            <img src="https://i.postimg.cc/yxRWXs2d/about_Card3.png" alt="" className="aboutCard1" width={300} height={200} loading="lazy" decoding="async" />
             <h2>Натуральные продукты</h2>
             <p>Только чистый горный мёд с дикорастущих трав, сохраняющий вкус и пользу.</p>
           </div>
@@ -106,7 +106,7 @@ const About = () => {
           <div className="about-seventh-form-content">
           <p className="about-contact-h2">Контакты</p>
           <a href="tel:+79409948837" className="contact-phone-img phone-contact">
-            <Image src="https://i.postimg.cc/G2QX3nXs/phone.png" className='contact-phone-image' alt="Телефон" loading="lazy" /> +7 (940) 994-88-37
+            <img src="https://i.postimg.cc/G2QX3nXs/phone.png" className='contact-phone-image' alt="Телефон" loading="lazy" /> +7 (940) 994-88-37
           </a>
           <a
             href={`https://www.google.com/maps/dir/?api=1&destination=${position[0]},${position[1]}`}
@@ -114,7 +114,7 @@ const About = () => {
             rel="noopener noreferrer"
             className="contact-phone-img phone-contact"
           >
-            <Image src="https://i.postimg.cc/m2Z0H8Mg/location.png" className='contact-location' alt="Адрес" loading="lazy" />
+            <img src="https://i.postimg.cc/m2Z0H8Mg/location.png" className='contact-location' alt="Адрес" loading="lazy" />
             <div className="contact-address">
               <p>Республика Абхазия, Бзыбское ущелье</p>
               <p className="about-contact-address-secondP">(построить маршрут)</p>
@@ -126,10 +126,10 @@ const About = () => {
           </a>
           <div className="about-contact-links">
                   <a href="https://wa.me/79409948837" target="_blank" rel="noreferrer noopener">
-                    <Image src="https://i.postimg.cc/zBjxDYxh/WA.png" alt="WhatsApp" loading="lazy" />
+                    <img src="https://i.postimg.cc/zBjxDYxh/WA.png" alt="WhatsApp" loading="lazy" />
                   </a>
                   <a href="https://instagram.com/alpiskiy_med" className="instagram-btn" target="_blank" rel="noreferrer noopener">
-                    <Image src="https://i.postimg.cc/VNPcQy7b/Inst.png" alt="Instagram" loading="lazy" />
+                    <img src="https://i.postimg.cc/VNPcQy7b/Inst.png" alt="Instagram" loading="lazy" />
                   </a>
                   <button
   onClick={() => {
@@ -139,7 +139,7 @@ const About = () => {
   className="max-btn"
   aria-label="Скопировать номер MAX"
 >
-  <Image
+  <img
     src="https://i.postimg.cc/SK9nfNgC/max.png"
     alt="MAX"
     loading="lazy"

@@ -4,7 +4,7 @@ import '@/styles/privacy.css';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
-import Image from 'next/image';
+
 
 const PrivacyPolicy = () => {
 
@@ -31,10 +31,10 @@ const PrivacyPolicy = () => {
                  <header className="catalog-header">
                 <div className="catalog-header-content">
                 <li className="logo-header-li"><Link href="/" className="catalog-logo-header">
-                <Image src='https://i.postimg.cc/PxtsJWs9/logohoney_1.png' alt="Логотип Дом мёда Аршба" loading="lazy" /></Link></li>
+                <img src='https://i.postimg.cc/PxtsJWs9/logohoney_1.png' alt="Логотип Дом мёда Аршба" loading="lazy" /></Link></li>
             
                     <button className="catalog-burger" onClick={() => setHomeMenuOpen(true)}>
-                        <Image src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
+                        <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
                     </button>
                     <nav className="privacy-header-links" aria-label="Основное меню">
                     <li><Link href="/about" title="О нашей пасеке в Абхазии">О нашей пасеке в Абхазии</Link></li>
