@@ -1,4 +1,4 @@
-'use client';
+ 'use client';
 
 import { useState, useRef, useEffect } from 'react';
 import '@/styles/home.css';
@@ -7,6 +7,8 @@ import { categories } from '@/data/categories';
 import DeferredBee from '@/components/DeferredBee';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+
+import Image from 'next/image';
 
 const cards = [
   {
@@ -71,10 +73,10 @@ const Home = () => {
       <header className="home-header">
         <div className="home-header-content">
         <li className="logo-header-li"><Link href="/" className="logo-header">
-        <img src="https://i.postimg.cc/PxtsJWs9/logohoney_1.png" alt="Логотип Дом мёда Абхазии" width={30} height={28} loading="lazy" decoding="async" /></Link></li>
+        <Image src="https://i.postimg.cc/PxtsJWs9/logohoney_1.png" alt="Логотип Дом мёда Абхазии" width={30} height={28} loading="lazy" decoding="async" /></Link></li>
 
           <button className="home-burger" onClick={() => setHomeMenuOpen(true)}>
-            <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
+            <Image src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
           </button>
 
           <nav className="header-links" aria-label="Основное меню">
@@ -93,7 +95,7 @@ const Home = () => {
 
       <div className="home-content">
         <div className="home-first-block">
-          <img src="https://i.postimg.cc/nr2gWQyk/honey.png" alt="Натуральный мёд из Абхазии" className="header-honey" width={400} height={300} fetchPriority="high" decoding="async" />
+          <Image src="https://i.postimg.cc/nr2gWQyk/honey.png" alt="Натуральный мёд из Абхазии" className="header-honey" width={400} height={300} fetchPriority="high" decoding="async" />
 
           <section className="home-categories-section">
             <h2 className="home-categories-title">АРШБА. ДОМ МЁДА</h2>
@@ -105,7 +107,7 @@ const Home = () => {
             <div className="home-categories-grid">
   {categories.map((cat, index) => (
     <div key={index} className={`home-category-card ${cat.className}`}>
-      <img src={cat.img} alt={cat.altText} className="category-img" width={300} height={200} loading="lazy" decoding="async" />
+      <Image src={cat.img} alt={cat.altText} className="category-img" width={300} height={200} loading="lazy" decoding="async" />
     </div>
   ))}
 </div>
@@ -122,15 +124,15 @@ const Home = () => {
 
               <ul className="home-third-block-text-ul">
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
+                  <Image src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Собственное производство</p>
                 </li>
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
+                  <Image src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Гарантия качества</p>
                 </li>
                 <li className="home-third-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
+                  <Image src="https://i.postimg.cc/kgG3kfXt/check.png" alt="" className="li-icon" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Натуральные продукты</p>
                 </li>
               </ul>
@@ -150,7 +152,7 @@ const Home = () => {
             <div className="top-section-cards">
               {cards.map((card, i) => (
                 <div className="news-section-card" key={i}>
-                  <img
+                  <Image
                     src={card.img}
                     className="top-bank-img"
                     alt={card.title}
@@ -198,19 +200,19 @@ const Home = () => {
 
               <ul className="home-fifth-block-text-ul">
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16}  />
+                  <Image src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16}  />
                   <p>Свои пасеки и пчёлы под заботой</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
+                  <Image src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Мёд из экологически чистых мест</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
+                  <Image src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Прямые поставки - от улья до вашего дома</p>
                 </li>
                 <li className="home-fifth-block-text-li">
-                  <img src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
+                  <Image src="https://i.postimg.cc/kgG3kfXt/check.png" className="home-third-li-icon" alt="" width={16} height={16} loading="lazy" decoding="async" />
                   <p>Тепло и душа в каждой баночке</p>
                 </li>
               </ul>
@@ -218,7 +220,7 @@ const Home = () => {
             </div>
 
             <div className="home-fifth-block-img">
-              <img src="https://i.postimg.cc/QdhV1LmV/bee.png" alt="Пчела" className="home-fifth-block-3imgs" width={400} height={300} />
+              <Image src="https://i.postimg.cc/QdhV1LmV/bee.png" alt="Пчела" className="home-fifth-block-3imgs" width={400} height={300} />
             </div>
           </section>
 
@@ -229,7 +231,7 @@ const Home = () => {
             <div className="home-seventh-form-content">
           <p className="contact-h2">Контакты</p>
           <a href="tel:+79409948837" className="contact-phone-img phone-contact">
-            <img src="https://i.postimg.cc/G2QX3nXs/phone.png" className='contact-phone-image' alt="" width={20} height={20} loading="lazy" decoding="async" /> +7 (940) 994-88-37
+            <Image src="https://i.postimg.cc/G2QX3nXs/phone.png" className='contact-phone-image' alt="" width={20} height={20} loading="lazy" decoding="async" /> +7 (940) 994-88-37
           </a>
           <a
             href={`https://www.google.com/maps/dir/?api=1&destination=${position[0]},${position[1]}`}
@@ -237,22 +239,22 @@ const Home = () => {
             rel="noopener noreferrer"
             className="contact-phone-img phone-contact"
           >
-            <img src="https://i.postimg.cc/m2Z0H8Mg/location.png" className='contact-location' alt="" width={23} height={20} loading="lazy" decoding="async" />
+            <Image src="https://i.postimg.cc/m2Z0H8Mg/location.png" className='contact-location' alt="" width={23} height={20} loading="lazy" decoding="async" />
             <div className="contact-address">
               <p>Республика Абхазия, Бзыбское ущелье</p>
               <p className="contact-address-secondP">(построить маршрут)</p>
             </div>
           </a>
           <a href="mailto:arshba27@mail.ru" className="contact-phone-img phone-contact">
-            <img src="https://i.postimg.cc/XJwTwPQd/gmail.png" className='contact-phone-image' alt="" width={20} height={20} loading="lazy" decoding="async" />
+            <Image src="https://i.postimg.cc/XJwTwPQd/gmail.png" className='contact-phone-image' alt="" width={20} height={20} loading="lazy" decoding="async" />
             arshba27@mail.ru
           </a>
           <div className="contact-links">
                   <a href="https://wa.me/79409948837" target="_blank" rel="noreferrer noopener">
-                    <img src="https://i.postimg.cc/zBjxDYxh/WA.png" alt="WhatsApp" width={35} height={33} loading="lazy" decoding="async" />
+                    <Image src="https://i.postimg.cc/zBjxDYxh/WA.png" alt="WhatsApp" width={35} height={33} loading="lazy" decoding="async" />
                   </a>
                   <a href="https://instagram.com/alpiskiy_med" className="instagram-btn" target="_blank" rel="noreferrer noopener">
-                    <img src="https://i.postimg.cc/VNPcQy7b/Inst.png" alt="Instagram" width={35} height={33} loading="lazy" decoding="async" />
+                    <Image src="https://i.postimg.cc/VNPcQy7b/Inst.png" alt="Instagram" width={35} height={33} loading="lazy" decoding="async" />
                   </a>
 
                   <button
@@ -263,7 +265,7 @@ const Home = () => {
   className="max-btn"
   aria-label="Скопировать номер MAX"
 >
-  <img
+  <Image
     src="https://i.postimg.cc/SK9nfNgC/max.png"
     alt="MAX"
     width={35}
