@@ -93,6 +93,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ru">
       <head>
         <link rel="preconnect" href="https://i.postimg.cc" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href="https://i.postimg.cc/nr2gWQyk/honey.png" />
         <link rel="dns-prefetch" href="https://i.postimg.cc" />
         <link rel="dns-prefetch" href="https://tile.openstreetmap.org" />
         <script

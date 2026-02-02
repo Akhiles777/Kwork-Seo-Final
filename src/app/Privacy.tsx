@@ -36,9 +36,9 @@ const PrivacyPolicy = () => {
                         <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
                     </button>
                     <nav className="privacy-header-links" aria-label="Основное меню">
-                    <li><Link href="/about" title="О нашей пасеке в Абхазии">О нашей пасеке</Link></li>
-              <li><Link href="/catalog" title="Каталог натурального мёда">Каталог мёда</Link></li>
-              <li><Link href="/delivery" title="Условия доставки и оплаты">Доставка и оплата</Link></li>
+                    <li><Link href="/about" title="О нашей пасеке в Абхазии">О нашей пасеке в Абхазии</Link></li>
+              <li><Link href="/catalog" title="Каталог натурального мёда">Каталог натурального мёда</Link></li>
+              <li><Link href="/delivery" title="Условия доставки и оплаты">Доставка и оплата заказа</Link></li>
                     </nav>
                 </div>
                 <hr className='header-hr' />
@@ -110,10 +110,10 @@ const PrivacyPolicy = () => {
       onClick={(e) => e.stopPropagation()}
     >
       <ul className="home-modal-list">
-      <li><Link href="/">Главная страница</Link></li>
-              <li><Link href="/about">О нашей пасеке</Link></li>
-              <li><Link href="/catalog">Каталог мёда</Link></li>
-              <li><Link href="/delivery">Доставка и оплата</Link></li>
+      <li><Link href="/">Главная страница сайта</Link></li>
+              <li><Link href="/about">О нашей пасеке в Абхазии</Link></li>
+              <li><Link href="/catalog">Каталог натурального мёда</Link></li>
+              <li><Link href="/delivery">Доставка и оплата заказа</Link></li>
       </ul>
 
       <button

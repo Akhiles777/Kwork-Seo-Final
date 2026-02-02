@@ -5,8 +5,8 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import '@/styles/about.css';
 import Footer from '@/components/Footer';
+import DeferredBee from '@/components/DeferredBee';
 
-const BeeAnimation = dynamic(() => import('@/components/BeeAnimation'), { ssr: false });
 const LazyMap = dynamic(() => import('@/components/LazyMap'), { ssr: false });
 
 const position: [number, number] = [43.315713, 40.408009];
@@ -32,7 +32,7 @@ const About = () => {
 
   return (
     <div className='about'>
-      <BeeAnimation />
+      <DeferredBee />
 
       <header className="about-header">
         <div className="about-header-content">
@@ -45,11 +45,11 @@ const About = () => {
           </button>
 
           <nav className="about-header-links" aria-label="Основное меню">
-            <Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке</Link>
-            <Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог мёда</Link>
-            <Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата</Link>
+            <Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке в Абхазии</Link>
+            <Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог натурального мёда</Link>
+            <Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата заказа</Link>
             <button className="about-contact-button" onClick={scrollToBottom} aria-label="Перейти к контактам">
-              Наши контакты
+              Связаться с нами
             </button>
           </nav>
         </div>
@@ -149,7 +149,7 @@ const About = () => {
         </div>
       </section>
 
-      {homeMenuOpen && ( <div className="home-modal-overlay" onClick={() => setHomeMenuOpen(false)}> <div className="home-modal" ref={homeMenuRef} onClick={(e) => e.stopPropagation()}> <ul className="home-modal-list"> <li><Link href="/">Главная страница</Link></li> <li><Link href="/about">О нашей пасеке</Link></li> <li><Link href="/catalog">Каталог мёда</Link></li> <li><Link href="/delivery">Доставка и оплата</Link></li> <li><button onClick={handleCloseModalAndScroll}>Наши контакты</button></li> </ul> <button className="home-modal-close" onClick={() => setHomeMenuOpen(false)}>Закрыть меню</button> </div> </div> )}
+      {homeMenuOpen && ( <div className="home-modal-overlay" onClick={() => setHomeMenuOpen(false)}> <div className="home-modal" ref={homeMenuRef} onClick={(e) => e.stopPropagation()}> <ul className="home-modal-list"> <li><Link href="/">Главная страница сайта</Link></li> <li><Link href="/about">О нашей пасеке в Абхазии</Link></li> <li><Link href="/catalog">Каталог натурального мёда</Link></li> <li><Link href="/delivery">Доставка и оплата заказа</Link></li> <li><button onClick={handleCloseModalAndScroll}>Связаться с нами</button></li> </ul> <button className="home-modal-close" onClick={() => setHomeMenuOpen(false)}>Закрыть меню</button> </div> </div> )}
 
             <Footer />
     </div>

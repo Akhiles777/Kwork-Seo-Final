@@ -2,10 +2,9 @@
 
 import { useState, useRef, useEffect } from 'react';
 import '@/styles/home.css';
-import dynamic from 'next/dynamic';
 import { categories } from '@/data/categories';
 
-const BeeAnimation = dynamic(() => import('@/components/BeeAnimation'), { ssr: false });
+import DeferredBee from '@/components/DeferredBee';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 
@@ -67,8 +66,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <BeeAnimation />
-      <BeeAnimation />
+      <DeferredBee />
 
       <header className="home-header">
         <div className="home-header-content">
@@ -80,11 +78,11 @@ const Home = () => {
           </button>
 
           <nav className="header-links" aria-label="Основное меню">
-          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке</Link></li>
-              <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог мёда</Link></li>
-              <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата</Link></li>
+          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке в Абхазии</Link></li>
+              <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог натурального мёда</Link></li>
+              <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата заказа</Link></li>
             <button className="footer-content-buttom-button" onClick={scrollToBottom} aria-label="Перейти к контактам">
-  Наши контакты
+  Связаться с нами
 </button>
 
           </nav>
@@ -99,6 +97,7 @@ const Home = () => {
 
           <section className="home-categories-section">
             <h2 className="home-categories-title">АРШБА. ДОМ МЁДА</h2>
+            <p className="home-categories-header-tagline">Натуральный горный мёд из Абхазии с доставкой по России</p>
             <p className="home-categories-subtitle">
               Наш мёд собирается в экологически чистых альпийских лугах Абхазии, где пчёлы питаются нектаром редких горных цветов. Более 37 лет мы бережно храним традиции пчеловодства и поставляем натуральный горный мёд напрямую с пасеки.
             </p>
@@ -292,12 +291,12 @@ const Home = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <ul className="home-modal-list">
-            <li><Link href="/">Главная страница</Link></li>
-              <li><Link href="/about">О нашей пасеке</Link></li>
-              <li><Link href="/catalog">Каталог мёда</Link></li>
-              <li><Link href="/delivery">Доставка и оплата</Link></li>
+            <li><Link href="/">Главная страница сайта</Link></li>
+              <li><Link href="/about">О нашей пасеке в Абхазии</Link></li>
+              <li><Link href="/catalog">Каталог натурального мёда</Link></li>
+              <li><Link href="/delivery">Доставка и оплата заказа</Link></li>
               <li>
-                <button onClick={scrollToContacts}>Наши контакты</button>
+                <button onClick={scrollToContacts}>Связаться с нами</button>
               </li>
             </ul>
 

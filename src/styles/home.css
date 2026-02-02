@@ -32,6 +32,14 @@
     font-size: 24px;
 }
 
+.home-categories-header-tagline {
+    color: #6c6c69;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
 .header-div {
   display: block;
 }
@@ -509,12 +517,12 @@ margin-top: -1.5%;
 }
 
 .header-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 9px;
-  color: #878474;
-  font-weight: 300;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ font-size: 11px;
+ color: #878474;
+ font-weight: 300;
   width: 43%;
   margin-top: 0.8%;
   margin-right: -10%;
@@ -526,9 +534,9 @@ margin-top: -1.5%;
 }
 
 .header-links button {
-  font-weight: 300;
-  font-size: 9px;
-  color: #a0a09b;
+ font-weight: 300;
+ font-size: 11px;
+ color: #a0a09b;
 }
 
 

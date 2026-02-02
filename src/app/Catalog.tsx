@@ -1,10 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect, useMemo } from 'react';
-import dynamic from 'next/dynamic';
 import '@/styles/catalog.css';
-
-const BeeAnimation = dynamic(() => import('@/components/BeeAnimation'), { ssr: false });
+import DeferredBee from '@/components/DeferredBee';
 import Pagination from '@/components/Pagination';
 import Link from 'next/link';
 import products from '@/data/products';
@@ -31,7 +29,7 @@ const Catalog = () => {
 
   return (
     <div className='catalog'>
-      <BeeAnimation />
+      <DeferredBee />
 
       <header className="catalog-header">
         <div className="catalog-header-content">
@@ -42,9 +40,9 @@ const Catalog = () => {
             <img src="https://i.postimg.cc/2jW5tjX8/burger.png" alt="Меню" width={31} height={14} loading="lazy" decoding="async" />
           </button>
           <nav className="catalog-header-links" aria-label="Основное меню">
-          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке</Link></li>
-              <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог мёда</Link></li>
-              <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата</Link></li>
+          <li><Link href="/about" title="О нашей пасеке и семейном деле в Абхазии">О нашей пасеке в Абхазии</Link></li>
+              <li><Link href="/catalog" title="Каталог натурального мёда из Абхазии">Каталог натурального мёда</Link></li>
+              <li><Link href="/delivery" title="Условия доставки и оплаты заказа">Доставка и оплата заказа</Link></li>
           </nav>
         </div>
         <hr className='header-hr' />
@@ -93,10 +91,10 @@ const Catalog = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <ul className="home-modal-list">
-            <li><Link href="/">Главная страница</Link></li>
-              <li><Link href="/about">О нашей пасеке</Link></li>
-              <li><Link href="/catalog">Каталог мёда</Link></li>
-              <li><Link href="/delivery">Доставка и оплата</Link></li>
+            <li><Link href="/">Главная страница сайта</Link></li>
+              <li><Link href="/about">О нашей пасеке в Абхазии</Link></li>
+              <li><Link href="/catalog">Каталог натурального мёда</Link></li>
+              <li><Link href="/delivery">Доставка и оплата заказа</Link></li>
             </ul>
             <button
               className="home-modal-close"
